@@ -1,0 +1,462 @@
+:root {
+	--primary: #ff7c00;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/*Zona De Informacion De Finanza*/
+
+#financeInformation {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 400;
+}
+
+.union {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 25px;
+}
+
+#name {
+	color: #444;
+	font-size: 33px;
+	margin: 10px 0;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+#exit {
+	font-size: 28px;
+	color: #333;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+.informationCard {
+	width: 60%;
+	background: #fff;
+	padding: 20px 25px;
+	border-radius: 7px;
+}
+
+.financeDescriptionShort, .descriptionPart { 
+	margin: 0 20px; 
+	width: 100%;
+}
+.financeDescriptionShort { margin-top: 18px; }
+
+.information { margin: 5px 5px; }
+
+.information h1 { 
+	width: 45%;
+	display: inline-block; 
+	font-size: 20px;
+	color: #444;
+	font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.informationUnion {
+	display: flex;
+	justify-content: center;
+}
+
+h1.id, h1.dataType, h1.specifyDataType, h1.entryDate, h1.creationDate, h1.modificationDate {
+	color: #fff;
+	border-radius: 2px;
+	padding: 2px 3px;
+	background: var(--primary);
+}
+
+h1.descriptionTitle {
+	color: var(--primary);
+	font-size: 30px;
+	margin: 10px 0;
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.description {
+	padding: 20px;
+	background: #eee;
+	letter-spacing: 1px;
+	color: #232323;
+	width: 100%;
+	max-height: 150px;
+	overflow: auto;
+	margin: 20px 0;
+}
+
+/*-----------------------*/
+
+.deleteBar {
+	padding: 15px;
+	width: 100%;
+	background: #ddd;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	text-align: center;
+	transform: translateY(-100px);
+	transition: .7s;
+}
+
+.deleteBar span {
+	font-size: 28px;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+}
+
+.deleteBarButton {
+	position: absolute;
+	top: 5px;
+	right: 150px;
+	display: inline-block;
+}
+
+.headerContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 20px 40px;
+	width: 100%;
+	height: 90vh;
+	background: rgb(255,158,0);
+	background: linear-gradient(135deg, rgba(255,158,0,.6) 22%, rgba(255,0,159,.6) 78%), url('../../img/tables/finances.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.fa-bars {
+	position: absolute;
+	top: 50px;
+	left: 60px;
+	color: #fff;
+	font-size: 40px;
+	cursor: pointer;
+	transition: color .5s;
+}
+
+.fa-bars:hover {
+	color: #ddd;
+}
+
+.fa-bars:active {
+	color: #ccc;
+}
+
+.navAbsolutePosition {
+	position: absolute;
+	right: 80px;
+	top: 60px;
+}
+
+.navAbsolutePosition a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	margin: 0 10px;
+	font-family: 'Fira Sans', sans-serif;
+	transition: color .4s;
+}
+
+.navAbsolutePosition a:hover {
+	color: #ddd;
+}
+
+.navAbsolutePosition a:active {
+	color: #ccc;
+}
+
+.title {
+	color: #fff;
+	font-size: 55px;
+	font-family: 'Indie Flower', cursive;
+}
+
+.searchArea {
+	margin: 20px 0;
+	text-align: center;
+	width: 100%;
+}
+
+.searchInput {
+	padding: 13px 20px;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	font-size: 18px;
+	font-weight: 600;
+	width: 40%;
+	color: #555;
+	transition: all .5s;
+}
+
+.searchInput::placeholder {
+	color: #aaa;
+	font-weight: 600;
+}
+
+.searchInput:hover {
+	background: #efefef;
+}
+
+.searchInput:focus {
+	background: #efefef;
+	border-left: 5px solid rgba(89,0,255,1);
+}
+
+.totalAmount {
+	margin: 15px 0;
+	width: 100%;
+	text-align: center;
+	color: #444;
+	font-family: 'Indie Flower', cursive;
+}
+
+.wave {
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	bottom: 0;
+}
+
+.container {
+	margin-top: 50px;
+	padding: 20px 40px;
+}
+
+.spanTitle {
+	margin: 20px 0;
+	font-size: 30px;
+	font-family: 'Josefin Sans', sans-serif;
+	text-align: center;
+	color: #333;
+}
+
+.editButtonContainer {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 12px 0;
+	margin: 20px 0;
+	border-bottom: 1px solid var(--primary);
+}
+
+.memberTitle h1 {
+	color: var(--primary);
+	font-size: 38px;
+	font-family: 'Indie Flower', cursive;
+}
+
+#filter {
+	margin: 10px;
+	padding: 6px 10px;
+	border: 1px solid var(--primary);
+	outline: none;
+	border-radius: 6px;
+	font-size: 18px;
+	color: #444;
+	cursor: pointer;
+	transition: all .5s;
+}
+
+.buttonContainer button {
+	margin: 0 4px;
+}
+
+#add, #delete, #update, #cancelUpdate, #cancelDelete, #confirm {
+	background: rgba(89,0,255,1);
+	padding: 13px 20px;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	font-size: 18px;
+	color: #fff;
+	cursor: pointer;
+	transition: all .5s;
+}
+
+#add:hover, #delete:hover, #update:hover, #cancelUpdate:hover, .result .financeName:hover {
+	background: #ff6000;
+}
+
+#add:active, #delete:active, #update:active, #cancelUpdate:active, .result .financeName:active {
+	background: #ff5000;
+}
+
+#cancelUpdate { display: none; }
+#cancelDelete { background: var(--primary); }
+
+#confirm { background: #007bff; }
+#confirm:hover { background: #0051ff; }
+#confirm:active { background: #001aff; }
+
+.dataContainer {
+	margin: 20px 0;
+	width: 100%;
+	max-width: 100%;
+	max-height: 600px;
+	overflow: auto;
+}
+
+.dataTitle {
+	position: sticky;
+	top: 0;
+	display: none;
+	grid-template-columns: repeat(3, 1fr);
+	gap:  5px;
+	text-align: center;
+}
+
+.dataTitle h4 {
+	font-family: 'Architects Daughter', cursive;
+	padding: 3px;
+	color: #fff;
+	background: var(--primary);
+}
+
+.result {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(3, 1fr);
+	gap:  3px;
+	text-align: center;
+}
+
+.thereAreNot {
+	font-size: 45px;
+	color: var(--primary);
+	font-weight: 1000;
+	font-family: 'Josefin Sans', sans-serif;
+	text-align: center;
+}
+
+.activeCursor { cursor: pointer; }
+
+.result h1 {
+	padding: 8px;
+	max-width: 100%;
+	font-size: 18px;
+	color: #00ff1d;
+	margin: 5px 0;
+	border: 1px solid #555;
+	border-radius: 3px;
+	overflow: auto;
+	transition: all .3s;
+}
+
+.result h1.expenses { color: #ff0000; }
+
+.mouseoverUpdate h1.expenses { color: #fff; }
+.mouseoverDelete h1.expenses { color: #fff; }
+
+.result h1.financeName {
+	background: var(--primary);
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+.mouseoverDelete > h1, .mouseoverDelete > h1.financeName, .mouseoverDelete > .financeName:hover, .mouseoverDelete > .financeName:active { 
+	background: #ff4400;
+	color: #fff;
+	border: none;
+}
+
+.selectedToDelete > h1, .selectedToDelete > h1.financeName, .selectedToDelete > h1.expenses {
+	background: #ff0000;
+	color: #fff;
+	border: none;
+}
+
+.mouseoverUpdate > h1, .mouseoverUpdate > h1.financeName, .mouseoverUpdate > .financeName:hover, .mouseoverUpdate > .financeName:active {
+	background: #00c42e;
+	color: #fff;
+	border: none;
+}
+
+/* sidebar */
+
+.dark {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 700vh;
+	background: #4447;
+	opacity: 0;
+	display: none;
+	transition: all 1s;
+	z-index: 1;
+}
+
+.darkActive {
+	display: block;
+	animation: darkActive 1s forwards;
+}
+
+.sidebar {
+	position: absolute;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 40px 20px;
+	background: #fff5;
+	width: 35%;
+	height: 100vh;
+	transform: translateX(-500px);
+	transition: transform .6s;
+	z-index: 10;
+}
+
+.activeBars {
+	transform: translateX(0);
+}
+
+.sidebar a {
+	text-decoration: none;
+}
+
+.buttonDiv {
+	display: flex;
+	justify-content: space-between;
+	margin: 3px 0;
+	background: rgba(89,0,255,1);
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.buttonDiv h1 {
+	color: #fff;
+	font-size: 30px;
+	margin: 10px 22px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.buttonDiv:hover {
+	background: var(--primary);
+	transform: scale(1.05);
+}
+
+@keyframes darkActive {
+	0% {
+		opacity: 0;		
+	}
+	100% {
+		opacity: 1;
+	}
+}

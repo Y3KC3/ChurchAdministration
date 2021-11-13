@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+	<html lang="es">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+			<title>Administracion De Miembros</title>
+			<link rel="stylesheet" type="text/css" href="../../css/tables/memberAdministration.css">
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+		</head>
+		<body>
+			<div class="deleteBar">
+				<span id="numberToDelete">Registro A Eliminar: 0</span>
+				<div class="deleteBarButton">
+					<button id="confirm">Confirmar</button>
+					<button id="cancel">Cancelar</button>
+				</div>
+			</div>
+			<div class="dark"></div>
+			<div class="sidebar">
+				<a href="../index.html">
+					<div class="buttonDiv">
+						<h1>Inicio</h1>
+					</div>
+				</a>
+				<a href="./memberAdministration.html">
+					<div class="buttonDiv">
+						<h1>Administracion</h1>
+					</div>
+				</a>
+				<a href="./finances.html">
+					<div class="buttonDiv">
+						<h1>Finanzas</h1>
+					</div>
+				</a>
+				<a href="./discipleship.html">
+					<div class="buttonDiv">
+						<h1>Discipulado</h1>
+					</div>
+				</a>
+				<a href="./email.html">
+					<div class="buttonDiv">
+						<h1>Correos</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Escuela Biblica</h1>
+					</div>	
+				</a>			
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Estadisticas</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Configuracion</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Ayuda</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Contacto</h1>
+					</div>
+				</a>
+			</div>
+			<header class="headerContainer">
+				<i class="fas fa-bars" id="bars"></i>
+				<nav class="navAbsolutePosition">
+					<a href="../index.html">Inicio</a>
+					<a href="./memberAdministration.html">Miembros</a>
+					<a href="./finances.html">Finanzas</a>
+					<a href="./discipleship.html">Discipulado</a>
+				</nav>
+				<h1 class="title">Administracion De Miembros</h1>
+				<div class="searchArea">
+					<input type="text" placeholder="Miembro A Buscar Por Nombre" class="searchInput" id="searchInput">
+				</div>
+			</header>
+			<div class="wave" style="height: 220px; overflow: hidden;" >
+				<svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+					<path d="M0.00,49.98 C232.22,222.53 371.61,-77.45 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path>
+				</svg>
+			</div>
+			<div class="container">
+				<h1 class="spanTitle"></h1>
+				<div class="editButtonContainer">
+					<div class="memberTitle">
+						<h1>MIEMBROS</h1>
+						<select id="filter">
+							<option>Ordenar Por Fecha De Registro Descendente</option>
+							<option>Ordenar Por Fecha De Registro Ascendente</option>
+							<option>Ordenar Ascendentemente Por El Abecedario</option>
+							<option>Ordenar Descendentemente Por El Abecedario</option>
+							<option>Ordenar Por La Mayor Edad</option>
+							<option>Ordenar Por La Menor Edad</option>
+							<option>Ordenar Por Integrantes Familiares Ascendente</option>
+							<option>Ordenar Por Integrantes Familiares Descendente</option>
+							<option>Ordenar Por Estados De Consolidacion Activa</option>
+							<option>Ordenar Por Estados De Consolidacion Inactiva</option>
+							<option>Ordenar Por Estados Activos De Creyentes</option>
+							<option>Ordenar Por Estados Pasivos De Creyentes</option>
+							<option>Ordenar Por Estados Suspendidos De Creyentes</option>
+							<option>Ordenar Por Cargos</option>
+						</select>
+					</div>
+					<div class="buttonContainer">
+						<button id="add">Añadir</button>
+						<button id="update">Actualizar</button>
+						<button id="cancelUpdate">Cancelar</button>
+						<button id="delete">Borrar</button>
+					</div>
+				</div>
+				<div class="dataContainer">
+					<div class="dataTitle">
+						<h4>Nombre</h4>
+						<h4>Telefono</h4>
+						<h4>Fecha Nacimiento</h4>
+						<h4>Edad</h4>
+						<h4>C.I</h4>
+						<h4>Direccion</h4>
+						<h4>Familia Integrantes</h4>
+						<h4>Relacion Familia</h4>
+						<h4>Profesion Oficio</h4>
+						<h4>Correo</h4>
+						<h4>Fecha Bautizo</h4>
+						<h4>Discipulado</h4>
+						<h4>Estado Del Creyente</h4>
+						<h4>Cargo Iglesia</h4>
+					</div>
+					<div class="dataResults"></div>
+					<p class="thereAreNot"></p>
+				</div>
+			</div>
+			<div class="informationSheet">
+				<div class="informationSheetTitle">
+					<h1 class="nameAbbreviationTitle" id="nameAbbreviationTitle">Cargando</h1>
+					<button id="exit">X</button>
+				</div>
+				<div class="firstDivision">
+					<div class="personalInformationGroup">
+						<h3>Nombres: </h3>
+						<h2 id="names">Cargando</h2>
+					</div>
+					<div class="personalInformationGroup">
+						<h3>Apellidos: </h3>
+						<h2 id="surnames">Cargando</h2>
+					</div>
+					<div class="personalInformationGroup">
+						<h3>Sexo: </h3>
+						<h2 id="sex">Cargando</h2>
+					</div>
+					<div class="personalInformationGroup">
+						<h3>Numero De Telefono: </h3>
+						<h2 id="phoneNumber">Cargando</h2>
+					</div>
+					<div class="personalInformationGroup">
+						<h3>C.I: </h3>
+						<h2 id="CI">Cargando</h2>
+					</div>
+					<div class="personalInformationGroup">
+						<h3>Fecha De Nacimiento: </h3>
+						<h2 id="dateOfBirth">Cargando</h2>
+					</div>
+					<div class="personalInformationGroup">
+						<h3>Edad: </h3>
+						<h2 id="age">Cargando</h2>
+					</div>
+					<div class="personalInformationGroup">
+						<h3>Direccion: </h3>
+						<h2 id="address">Cargando</h2>
+					</div>
+					<div class="personalInformationGroup">
+						<h3>Miembro En La Familia: </h3>
+						<h2 id="memebersFamily">Cargando</h2>
+					</div>
+					<div class="personalInformationGroup">
+						<h3>Relacion En La Familia: </h3>
+						<h2 id="familyRelationship">Cargando</h2>
+					</div>
+					<div class="personalInformationGroup">
+						<h3>Profesion / Oficio: </h3>
+						<h2 id="professionJob">Cargando</h2>
+					</div>
+					<div class="personalInformationGroup">
+						<h3>Correo: </h3>
+						<h2 id="email">Cargando</h2>
+					</div>
+					<div class="personalInformationGroup">
+						<h3>Fecha De Bautizo: </h3>
+						<h2 id="christeningDate">Cargando</h2>
+					</div>
+					<div class="personalInformationGroup">
+						<h3>Estado Del Creyente: </h3>
+						<h2 id="beliverStatus">Cargando</h2>
+					</div>
+					<div class="personalInformationGroup">
+						<h3>Cargo En La Iglesia: </h3>
+						<h2 id="churchCharge">Cargando</h2>
+					</div>
+				</div>
+				<div class="secondDivision">
+					<div class="personalInformationGroupInDescription">
+						<h2 class="descriptionTitle">Descripcion / Biografia</h1>
+						<p class="personalDescription" id="biography"></p>
+					</div>
+					<div class="personalInformationGroupInDescription">
+						<h3>Fecha De Creacion: </h3>
+						<h2 id="creationDate">Cargando</h2>
+					</div>
+					<div class="personalInformationGroupInDescription">
+						<h3>Fecha De Modificacion: </h3>
+						<h2 id="modificationDate">Cargando</h2>
+					</div>
+				</div>
+			</div>
+			<script src="../../js/tables/memberAdministration.js"></script>
+		</body>
+	</html>

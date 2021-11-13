@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+	<html lang="es">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+			<title>Finanzas</title>
+			<link rel="stylesheet" type="text/css" href="../../css/tables/finances.css">
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+		</head>
+		<body>
+			<div id="financeInformation">
+        		<div class="informationCard">
+        			<div class="union">
+        				<h1 id="name">Diezmo</h1>
+        				<button id="exit">X</button>
+        			</div>
+        			<div class="informationUnion">
+        				<div class="financeDescriptionShort">
+        					<div class="information">
+        						<h1>Id: </h1>
+        						<h1 class="id">Cargando...</h1>
+        					</div>
+        					<div class="information">
+        						<h1>Tipo De Dato: </h1>
+        						<h1 class="dataType">Cargando...</h1>
+        					</div>
+        					<div class="information">
+        						<h1>Tipo De Dato Especifico: </h1>
+        						<h1 class="specifyDataType">Cargando...</h1>
+        					</div>
+        					<div class="information">
+        						<h1>Cantidad: </h1>
+        						<h1 class="amountInformation">Cargando...</h1>
+        					</div>
+        				</div>
+        				<div class="descriptionPart">
+        					<div class="information">
+        						<h1 class="descriptionTitle">Descripcion </h1>
+        						<p class="description"></p>
+        					</div>
+        					<div class="information">
+        						<h1>Fecha De Creacion: </h1>
+        						<h1 class="creationDate">Cargando...</h1>
+        					</div>
+        					<div class="information">
+        						<h1>Fecha De Modificacion: </h1>
+        						<h1 class="modificationDate">Cargando...</h1>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+			<div class="deleteBar">
+				<span id="numberToDelete">Registro A Eliminar: 0</span>
+				<div class="deleteBarButton">
+					<button id="confirm">Confirmar</button>
+					<button id="cancelDelete">Cancelar</button>
+				</div>
+			</div>
+			<div class="dark"></div>
+			<div class="sidebar">
+				<a href="../index.html">
+					<div class="buttonDiv">
+						<h1>Inicio</h1>
+					</div>
+				</a>
+				<a href="./memberAdministration.html">
+					<div class="buttonDiv">
+						<h1>Administracion</h1>
+					</div>
+				</a>
+				<a href="./finances.html">
+					<div class="buttonDiv">
+						<h1>Finanzas</h1>
+					</div>
+				</a>
+				<a href="./discipleship.html">
+					<div class="buttonDiv">
+						<h1>Discipulado</h1>
+					</div>
+				</a>
+				<a href="./email.html">
+					<div class="buttonDiv">
+						<h1>Correos</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Escuela Biblica</h1>
+					</div>	
+				</a>			
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Estadisticas</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Configuracion</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Ayuda</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Contacto</h1>
+					</div>
+				</a>
+			</div>
+			<header class="headerContainer">
+				<i class="fas fa-bars" id="bars"></i>
+				<nav class="navAbsolutePosition">
+					<a href="../index.html">Inicio</a>
+					<a href="./memberAdministration.html">Miembros</a>
+					<a href="./finances.html">Finanzas</a>
+					<a href="./discipleship.html">Discipulado</a>
+				</nav>
+				<h1 class="title">Administracion De Finanzas</h1>
+				<div class="searchArea">
+					<input type="text" placeholder="Buscar Finanza Por Nombre" class="searchInput" id="searchInput">
+				</div>
+			</header>
+			<div class="wave" style="height: 220px; overflow: hidden;" >
+				<svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+					<path d="M0.00,49.98 C232.22,222.53 371.61,-77.45 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path>
+				</svg>
+			</div>
+			<div class="container">
+				<h1 class="spanTitle"></h1>
+				<div class="editButtonContainer">
+					<div class="memberTitle">
+						<h1>Finanzas</h1>
+						<select id="filter">							
+							<option>Ordenar Por Fecha De Registro Descendente</option>
+							<option>Ordenar Por Fecha De Registro Ascendente</option>
+							<option>Ordenar Por Nombre Ascencendemente</option>
+							<option>Ordenar Por Nombre Descendemente</option>
+							<option>Ordenar Por Mayor Cantidad Ingresada</option>
+							<option>Ordenar Por Mayor Cantidad Egresada</option>
+							<option>Ordenar Por Menor Cantidad Ingresada</option>
+							<option>Ordenar Por Menor Cantidad Egresada</option>
+						</select>
+					</div>
+					<div class="containerUnion">
+						<h1 class="totalAmount">Cantidad Total: --</h1>
+						<div class="buttonContainer">
+							<button id="add">Añadir Finanza</button>
+							<button id="delete">Eliminar Registro</button>
+							<button id="cancelUpdate">Cancelar</button>
+							<button id="update">Actualizar</button>
+						</div>
+					</div>
+				</div>
+				<div class="dataContainer">
+					<div class="dataTitle">
+						<h4>Nombre De Dato</h4>
+						<h4>Cantidad</h4>
+						<h4>Fecha De Creacion</h4>
+					</div>
+					<div class="dataResults"></div>
+					<p class="thereAreNot"></p>
+				</div>
+			</div>
+			<script src="../../js/tables/finances.js"></script>
+		</body>
+	</html>

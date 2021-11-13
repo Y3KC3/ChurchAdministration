@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Añadir Miembro</title>
+            <link rel="stylesheet" type="text/css" href="../../css/eventsStyles/addMember.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <div class="container">
+                <form class="form-container">
+                    <h1 class="title">Añadir Miembro</h1>
+                    <div class="input-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" placeholder="Nombre" class="input-control">
+                        <p class="name"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="secondName">Segundo Nombre</label>
+                        <input type="text" id="secondName" placeholder="Segundo Nombre" class="input-control">
+                        <p class="secondName"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="lastName">Apellido</label>
+                        <input type="text" id="lastName" placeholder="Apellido" class="input-control">
+                        <p class="lastName"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="sencondSurname">Segundo Apellido</label>
+                        <input type="text" id="secondSurname" placeholder="Segundo Apellido" class="input-control">
+                        <p class="secondSurname"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="nameAbbreviation">Abreviacion De Nombre *</label>
+                        <input type="text" id="nameAbbreviation" placeholder="Abreviacion De Nombre *" class="input-control">
+                        <p class="nameAbbreviation"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="sex">Sexo</label>
+                        <select id="sex">
+                            <option value="Hombre">Hombre</option>
+                            <option value="Mujer">Mujer</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="phoneNumber">Numero De Telefono</label>
+                        <input type="number" id="phoneNumber" placeholder="Numero De Telefono" class="input-control">
+                        <p class="phoneNumber"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="identification">Cedula De Identificacion</label>
+                        <input type="number" id="identification" placeholder="Cedula De Identificacion" class="input-control">
+                        <p class="identification"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="dateOfbirth">Fecha De Nacimiento</label>
+                        <input type="date" id="dateOfBirth" placeholder="Fecha De Nacimiento" value="2000-01-01" min="1900-01-01" max="2022-01-01" class="input-control">
+                        <p class="dateOfBirth"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="age">Edad</label>
+                        <input type="number" id="age" placeholder="Edad" class="input-control">
+                        <p class="age"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="address">Direccion</label>
+                        <input type="text" id="address" placeholder="Direccion" class="input-control">
+                        <p class="address"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="familyMembers">Cantidad De Miembros En La Familia</label>
+                        <input type="number" id="familyMembers" placeholder="Cantidad De Miembros En La Familia" class="input-control">
+                        <p class="familyMembers"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="familyRelationship">Relacion En La Familia</label>
+                        <select id="familyRelationship">
+                            <option>Hij@</option>
+                            <option>Herman@</option>
+                            <option>Padre/Madre</option>
+                            <option>Abuel@</option>
+                            <option>Ñiet@</option>
+                            <option>Ti@</option>
+                            <option>prim@</option>
+                            <option>Sobrin@</option>
+                            <option>Otro</option>
+                        </select>
+                        <input type="text" placeholder="Escriba La Relacion De Familia" class="familyRelationship inactive">
+                        <p class="familyRelationshipP"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="professionJob">Profesion / Oficio</label>
+                        <input type="text" id="professionJob" placeholder="Profesion / Oficio" class="input-control">
+                        <p class="professionJob"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Correo Electronico</label>
+                        <input type="email" id="email" placeholder="Correo Electronico" class="input-control">
+                        <p class="email"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="christeningDate">Fecha De Bautizo</label>
+                        <input type="date" id="christeningDate" placeholder="Fecha De Bautizo" value="2000-01-01" min="1950-01-01" max="2022-01-01" class="input-control">
+                        <p class="christeningDate"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="beliverStatus">Estado Del Creyente</label>
+                        <select id="beliverStatus">
+                            <option>Pasivo</option>
+                            <option>Activo</option>
+                            <option>Suspendido</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="churchCharge">Cargo En La Iglesia</label>
+                        <select id="churchCharge">
+                            <option>Miembro</option>
+                            <option>Siervo</option>
+                            <option>Obrer@</option>
+                            <option>Limpieza</option>
+                            <option>Cociner@</option>
+                            <option>Lider</option>
+                            <option>Musico</option>
+                            <option>Danza</option>
+                            <option>Ninguno De Los Anteriores</option>
+                        </select>
+                        <input type="text" placeholder="Escriba El Cargo En La Iglesia" class="inputCharge inactive">
+                        <p class="churchChargeP"></p>
+                    </div>
+                    <div class="input-group biography">
+                        <label for="biography">Biografia / Descripcion</label>
+                        <textarea id="biography" placeholder="Biografia / Descripcion"></textarea>
+                        <p class="biographyP"></p>
+                    </div>
+                    <div class="input-group send">
+                        <button type="submit" id="send">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <script src="../../js/events/addMember.js"></script>
+        </body>
+    </html>

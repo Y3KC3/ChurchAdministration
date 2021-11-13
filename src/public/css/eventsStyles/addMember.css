@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #333;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background: rgb(255,158,0);
+	background: linear-gradient(135deg, rgba(255,158,0,.6) 22%, rgba(255,0,159,.6) 78%), url('../../img/eventImage/addMember.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    padding: 20px;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    background: #fffa;
+    border-radius: 5px;
+}
+
+.title {
+    padding-bottom: 10px;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 40px;
+    background: -webkit-linear-gradient(60deg, rgb(255, 178, 13) 22%, rgb(149, 0, 255) 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Indie Flower', cursive;
+    grid-column: span 2;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 15px;
+}
+
+.input-group label {
+    font-weight: 700;
+    font-size: 18px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.input-group input, .input-group select, #biography {
+    padding: 8px 15px;
+    font-size: 18px;
+    font-weight: 650;
+    color: #444;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #eee;
+    transition: .2s all;
+}
+
+.input-group p {
+    color: #ff0004;
+    position: relative;
+    top: 15px
+}
+
+.input-group select {
+    background: #009dff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.input-group select:hover {
+    background: #0177f5;
+    color: #fff;
+    cursor: pointer;
+}
+
+.input-group select:focus {
+    background: #0068d7;
+    color: #fff;
+    cursor: pointer;
+}
+
+.input-group select option {
+    background: #fff;
+    color: #444;
+}
+
+.input-group input::placeholder, .input-group textarea::placeholder {
+    font-weight: 650;
+    color: #777;
+}
+
+.input-group input:hover, .input-group textarea:hover {
+    background: #ddd;
+}
+
+.input-group input:focus {
+    background: #ddd;
+    border-left: 5px solid #009dff;
+}
+
+.input-group textarea:focus { background: #ddd; };
+
+.input-group input:active {
+    background: #ccc;
+    border-left: 7px solid #2b00ff;
+}
+
+.input-group textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 50px;
+    max-height: 200px;
+}
+
+.inactive {
+    display: none;
+}
+
+.active {
+    display: block;
+    margin: 8px 0;
+}
+
+.biography {
+    grid-column: span 2;
+}
+
+.send {
+    grid-column: span 2;
+}
+
+#send {
+    padding: 8px 15px;
+    font-size: 18px;
+    font-weight: 650;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #009dff;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+#send:hover {
+    background: #00c8ff;
+}
+
+#send:active {
+    background: #00eeff;
+}

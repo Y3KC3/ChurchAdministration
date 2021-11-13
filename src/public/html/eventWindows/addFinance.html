@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Añadir Finanza</title>
+            <link rel="stylesheet" type="text/css" href="../../css/eventsStyles/addFinance.css">
+        </head>
+        <body>
+            <div class="container">
+                <form class="form-container">
+                    <h1 class="title">Añadir Finanza</h1>
+                    <div class="input-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" placeholder="*Nombre" class="input-control" required>
+                        <p class="name"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="dataType">Tipo De Dato</label>
+                        <select id="dataType">
+                            <option>Ingreso</option>
+                            <option>Egreso</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="specifyDataType">Especificar Tipo De Dato</label>
+                        <select id="specifyDataType">
+                            <option>Diezmo</option>
+                            <option>Ofrenda</option>
+                            <option>Primicia</option>
+                            <option>Pacto</option>
+                            <option>Gasto</option>
+                            <option>Otro</option>
+                        </select>
+                        <input type="text" id="specifyDataTypeInput" class="inactive" placeholder="Especifica El Tipo De Dato">
+                        <p class="specifyDataType"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="amount">Cantidad</label>
+                        <input type="number" id="amount" placeholder="*Cantidad" class="input-control" required>
+                        <p class="amount"></p>
+                    </div>
+                    <div class="input-group description">
+                        <label for="description">Descripcion</label>
+                        <textarea id="description" placeholder="Descripcion"></textarea>
+                        <p class="descriptionP"></p>
+                    </div>
+                    <div class="input-group send">
+                        <button type="submit" id="send">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <script src="../../js/events/addFinance.js"></script>
+        </body>
+    </html>

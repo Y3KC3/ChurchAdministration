@@ -1,0 +1,78 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #f4f4f4;
+}
+
+.mainContainer {
+	padding: 25px 50px;
+}
+
+.containerTitle {
+	margin: 25px 0;
+}
+
+.containerTitle h1 {
+	font-family: sans-serif;
+	font-weight: 750;
+}
+
+.containerTitle p {
+	letter-spacing: .6px;
+}
+
+.containerForm {
+	margin-top: 30px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.controlInput {
+	background: #fff;
+	width: 80%;
+	max-width: 90%;
+	padding: 10px 20px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	transition: all .3s;
+}
+
+.controlInput:focus {
+	box-shadow: -5px 5px #1cb5e0;
+}
+
+.controlInput::placeholder {
+	color: #888;
+	font-weight: 620;
+}
+
+
+.submit {
+	background: #1cb5e0;
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	margin: 30px 0;
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: 1px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.submit:hover {
+	background: #323232;
+}
+
+.submit:active {
+	background: #001a34;
+}

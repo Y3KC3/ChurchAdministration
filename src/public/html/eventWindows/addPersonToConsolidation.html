@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Añadir Persona A Consolidacion</title>
+            <link rel="stylesheet" type="text/css" href="../../css/eventsStyles/addPersonToConsolidation.css">
+        </head>
+        <body>
+            <div class="container">
+                <form class="form-container">
+                    <h1 class="title">Añadir Persona A Consolidacion</h1>
+                    <div class="input-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" placeholder="*Nombre" class="input-control" required>
+                        <p class="name"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="lastName">Apellido</label>
+                        <input type="text" id="lastName" placeholder="Apellido" class="input-control" required>
+                        <p class="lastName"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="age">Edad</label>
+                        <input type="number" id="age" placeholder="Edad" class="input-control">
+                        <p class="age"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="phoneNumber">Numero De Telefono</label>
+                        <input type="number" id="phoneNumber" placeholder="Numero De Telefono" class="input-control">
+                        <p class="phoneNumber"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="address">Direccion</label>
+                        <input type="text" id="address" placeholder="Direccion" class="input-control">
+                        <p class="address"></p>
+                    </div>
+                    <div class="input-group">
+                        <label for="membersToTakeResponsibility">Personas A Responsabilizar</label>
+                        <select id="membersToTakeResponsibility">
+                            <option value="Delegar Responsabilidades" disabled selected style="display:none;">Delegar Responsabilidades</option>
+                        </select>
+                        <p class="membersToTakeResponsibility"></p>   
+                    </div>
+                    <div class="membersToTakeResponsibilitySelected input-group">
+                        <div id="membersToTakeResponsibilitySelected"></div>
+                    </div>
+                    <div class="input-group send">
+                        <button type="submit" id="send">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <script src="../../js/events/addPersonToConsolidation.js"></script>
+        </body>
+    </html>

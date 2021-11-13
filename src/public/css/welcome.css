@@ -1,0 +1,64 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: #444;
+}
+
+body {
+	background: #000046;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+	display: flex;
+	width: 60%;
+	padding: 40px;
+	margin: auto;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	transition: transform 2s;
+}
+
+.container div h1 {
+	font-family: 'Hina Mincho', serif;
+	color: #fff;
+	font-size: 40px;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.container div p {
+	font-size: 19px;
+	color: #fff;
+	font-family: 'Arvo', serif;
+	text-align: justify;
+	letter-spacing: 1px;
+}
+
+.arrowButton {
+	display: block;
+	color: #fff;
+	background: #001a34;
+	width: 40%;
+	font-size: 25px;
+	padding: 10px 15px;
+	text-align: center;
+	margin: 10px auto;
+	margin-top: 50px;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background .4s;
+}
+
+.arrowButton:hover {
+	background: #111;
+}
+
+.arrowButton:active {
+	background: #000;
+}

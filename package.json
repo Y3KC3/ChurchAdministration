@@ -1,0 +1,23 @@
+{
+  "name": "Church_Administration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "electron": "^13.2.2",
+    "electron-alert": "^0.1.18",
+    "nodemailer": "^6.6.3",
+    "promise-mysql": "^5.0.3"
+  },
+  "devDependencies": {
+    "electron-builder": "^22.11.7",
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}

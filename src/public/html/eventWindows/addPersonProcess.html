@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Añadir Persona A Consolidacion</title>
+            <link rel="stylesheet" type="text/css" href="../../css/eventsStyles/addPersonProcess.css">
+        </head>
+        <body>
+            <div class="container">
+                <form class="form-container">
+                    <h1 class="title">Añadir Proceso</h1>
+                    <div class="input-group">
+                        <label for="processTitle">Titulo</label>
+                        <input type="text" id="processTitle" placeholder="Titulo" class="input-control" required>
+                        <p class="processTitle"></p>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group">
+                            <label for="consolidationLeader">Lider De Consolidacion</label>
+                            <select id="consolidationLeader"></select>
+                        </div>
+                    </div>
+                    <div class="input-group observation">
+                        <label for="observation">Observacion</label>
+                        <input type="text" id="observation" placeholder="Observacion" class="input-control" required>
+                        <p class="observationP"></p>
+                    </div>
+                    <div class="input-group description">
+                        <label for="description">Descripcion</label>
+                        <textarea id="description" placeholder="Descripcion" class="input-control"></textarea>
+                        <p class="descriptionP"></p>
+                    </div>                    
+                    <div class="input-group send">
+                        <button type="submit" id="send">Enviar</button>
+                    </div>
+                    <p id="error"></p>
+                </form>
+            </div>
+            <script src="../../js/events/addPersonProcess.js"></script>
+        </body>
+    </html>

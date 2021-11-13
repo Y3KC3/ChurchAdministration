@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+			<title>Discipulado</title>
+			<link rel="stylesheet" type="text/css" href="../../css/tables/discipleship.css">
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        </head>
+        <body>
+        	<div id="discipleshipMemberInformation">
+        		<div class="informationCard">
+        			<div class="union">
+        				<h1 id="name">Cargando...</h1>
+        				<button id="exit">X</button>
+        			</div>
+        			<div class="memberDescriptionShort">
+        				<div class="information">
+        					<h1>Id Miembro: </h1>
+        					<h1 class="memberId">Cargando...</h1>
+        				</div>
+        				<div class="information">
+        					<h1>Id Discipulado: </h1>
+        					<h1 class="discipleshipId">Cargando...</h1>
+        				</div>
+        				<div class="information">
+        					<h1>Assistencia Total: </h1>
+        					<h1 class="totalAssistance">Cargando...</h1>
+        				</div>
+        				<div class="information">
+        					<h1>Fecha De Entrada: </h1>
+        					<h1 class="entryDate">Cargando...</h1>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+			<div id="processInformation">
+        		<div class="processInformationCard">
+        			<div class="processUnion">
+        				<h1 id="processName">Cargando...</h1>
+        				<button id="processExit">X</button>
+        			</div>
+        			<div class="informationContainer">
+						<div class="processDescriptionShort">
+							<div class="information">
+								<h1>Id Proceso: </h1>
+								<h1 class="processId">Cargando...</h1>
+							</div>
+							<div class="information">
+								<h1>Lider De Consolidacion: </h1>
+								<h1 class="consolidationLeader">Cargando...</h1>
+							</div>
+							<div class="information">
+								<h1>Tiempo Total: </h1>
+								<h1 class="totalTime">Cargando...</h1>
+							</div>
+							<div class="information">
+								<div class="processObservation"></div>
+							</div>
+						</div>
+						<div class="processDescriptionContainer">
+							<div class="informationDescription">
+								<h1 class="descriptionTitle">Descripcion</h1>
+								<div class="processDescription"></div>
+							</div>
+							<div class="information">
+								<h1>Fecha De Creacion: </h1>
+								<h1 class="processCreationDate">Cargando...</h1>
+							</div>
+							<div class="information">
+								<h1>Fecha De Modificacion: </h1>
+								<h1 class="processModificationDate">Cargando...</h1>
+							</div>
+						</div>
+					</div>
+        		</div>
+        	</div>
+			<div class="deleteBar">
+				<span id="numberToDelete">Registro A Eliminar: 0</span>
+				<div class="deleteBarButton">
+					<button id="confirm">Confirmar</button>
+					<button id="cancelDelete">Cancelar</button>
+				</div>
+			</div>
+			<form class="form-container">
+				<div class="formContentContainer">
+					<h2 class="addMemberTitle">Añadir Miembro AL Discipulado</h2>
+					<div class="input-group">						
+						<select id="nameOptions"></select>
+					</div>
+					<div class="input-group send">
+						<button type="submit" id="send">Enviar</button>
+						<button id="cancelMemberSend">Cancelar</button>
+					</div>
+				</div>
+			</form>
+            <div class="dark"></div>
+			<div class="sidebar">
+				<a href="../index.html">
+					<div class="buttonDiv">
+						<h1>Inicio</h1>
+					</div>
+				</a>
+				<a href="./memberAdministration.html">
+					<div class="buttonDiv">
+						<h1>Administracion</h1>
+					</div>
+				</a>
+				<a href="./finances.html">
+					<div class="buttonDiv">
+						<h1>Finanzas</h1>
+					</div>
+				</a>
+				<a href="./discipleship.html">
+					<div class="buttonDiv">
+						<h1>Discipulado</h1>
+					</div>
+				</a>
+				<a href="./email.html">
+					<div class="buttonDiv">
+						<h1>Correos</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Escuela Biblica</h1>
+					</div>	
+				</a>			
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Estadisticas</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Configuracion</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Ayuda</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Contacto</h1>
+					</div>
+				</a>
+			</div>
+            <header class="headerContainer">
+				<i class="fas fa-bars" id="bars"></i>
+				<nav class="navAbsolutePosition">
+					<a href="../index.html">Inicio</a>
+					<a href="./memberAdministration.html">Miembros</a>
+					<a href="./finances.html">Finanzas</a>
+					<a href="./discipleship.html">Discipulado</a>
+				</nav>
+				<h1 class="title">Registro De Discipulado</h1>
+				<div class="searchArea"><input type="text" placeholder="Miembro A Buscar" class="searchInput" id="searchInput"></div>
+			</header>
+			<div class="wave" style="height: 220px; overflow: hidden;" >
+				<svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+					<path d="M0.00,49.98 C232.22,222.53 371.61,-77.45 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path>
+				</svg>
+			</div>
+            <div class="container">
+				<h1 class="spanTitle"></h1>
+				<div class="editButtonContainer">
+					<div class="memberTitle">
+						<h1 id="discipleshipTitle">Discipulado</h1>
+						<select id="filter">
+							<option>Ordenar Por Orden De Registro Descendente</option>
+							<option>Ordenar Por Orden De Registro Ascendente</option>							
+							<option>Ordenar Ascendentemente Por El Abecedario</option>
+							<option>Ordenar Descendentemente Por El Abecedario</option>
+							<option>Ordenar Por Cantidad De Consolidacion Ascendente</option>
+							<option>Ordenar Por Cantidad De Consolidacion Descendente</option>
+							<option>Ordenar Por Cantidad De Asistencia Ascendente</option>
+							<option>Ordenar Por Cantidad De Asistencia Descendente</option>
+							<option>Ordenar Solo Por Los Que Estan Consolidando</option>
+							<option>Ordenar Solo Por Los Que No Estan Consolidando</option>
+						</select>
+					</div>
+					<div class="buttonContainer">
+						<div class="discipleshipButtons">
+							<button id="add">Añadir Miembro</button>
+							<button id="delete">Borrar Miembro</button>
+							<button id="rollCall">Pasar Lista</button>
+							<button id="confirmRollCall">Listo</button>
+							<button id="cancelRollCall">Cancelar</button>
+						</div>
+						<div class="consolidationButtons">
+							<button id="addPersonToConsolidation">Añadir Persona</button>
+							<button id="deleteConsolidationPerson">Borrar Persona</button>
+							<button id="updateConsolidationPerson">Actualizar Persona</button>
+							<button id="cancelUpdate">Cancelar</button>
+						</div>
+						<div class="processButtons">
+							<button id="addProcess">Añadir Proceso</button>
+							<button id="deleteProcess">Borrar Proceso</button>
+							<button id="updateProcess">Actualizar Proceso</button>
+							<button id="cancelUpdateProcess">Cancelar</button>
+						</div>
+					</div>
+				</div>
+				<div class="dataContainer">
+					<button id="back">ATRAS</button>
+					<div class="dataTitle">
+						<div class="smallInformation">
+							<h4>Id</h4>
+							<h4 id="assistance">Asistencia</h4>
+						</div>
+						<h4>Nombre</h4>
+						<h4>Personas Consolidando</h4>
+					</div>
+					<div class="consolidationPersonDataTitle">
+						<h4>Id</h4>
+						<h4>Nombre Y Apellido</h4>
+						<h4>Edad</h4>
+						<h4>Numero De Telefono</h4>
+						<h4>Direccion</h4>
+						<h4>Proceso</h4>
+					</div>
+					<div class="consolidationProcessDataTitle">
+						<h4>Id</h4>
+						<h4>Titulo</h4>
+						<h4>Lider En La Consolidacion</h4>
+						<h4>Observacion</h4>
+						<h4>Fecha De Creacion</h4>
+					</div>
+					<div class="dataResults"></div>
+					<div class="consolidationPersonDataResults"></div>
+					<div class="consolidationProcessDataResults"></div>
+					<p class="thereAreNot"></p>					
+				</div>
+			</div>
+			
+			<div class="listContainer">
+				<div class="listTitle">
+					<h1>Registro De Lista</h1>
+					<button id="registerListExit">X</button>
+				</div>
+				<hr/>
+				<div class="listRecordContainer">
+					<div class="dateDataTitle"></div>
+					<div class="assitance"></div>
+					<p class="loadingList"></p>
+					<p class="thereAreNotList"></p>
+					<p class="spanTitleList"></p>
+				</div>
+				<div class="listButtons">
+					<button id="cancelListEvent">Cancelar</button>
+					<button id="editList">Editar Lista</button>
+					<button id="removeList">Eliminar Lista</button>
+				</div>
+			</div>
+            
+			<script src="../../js/tables/discipleship.js"></script>
+        </body>
+    </html>
