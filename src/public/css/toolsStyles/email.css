@@ -1,0 +1,381 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* sidebar */
+
+body {
+    background: #eee;
+}
+
+.dark {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 700vh;
+	background: #4447;
+	opacity: 0;
+	display: none;
+	transition: all 1s;
+	z-index: 10;
+}
+
+.darkActive {
+	display: block;
+	animation: darkActive 1s forwards;
+}
+
+.sidebar {
+	position: absolute;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 40px 20px;
+	background: #fff5;
+	width: 35%;
+	height: 100vh;
+	transform: translateX(-500px);
+	transition: transform .6s;
+	z-index: 20;
+}
+
+.activeBars {
+	transform: translateX(0);
+}
+
+.sidebar a {
+	text-decoration: none;
+}
+
+.buttonDiv {
+	display: flex;
+	justify-content: space-between;
+	margin: 3px 0;
+	background: #333;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.buttonDiv h1 {
+	color: #fff;
+	font-size: 30px;
+	margin: 10px 22px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.buttonDiv:hover {
+	background: #777;
+	transform: scale(1.05);
+}
+
+@keyframes darkActive {
+	0% {
+		opacity: 0;		
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/**/
+
+.thereAreNoInternet {
+	width: 300px;
+	background: #8f0000;
+	padding: 10px 15px;
+	border-radius: 5px;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	top: 50px;
+	left: 40%;
+	transform: translateY(-100px);
+	z-index: 25;
+	transition: .5s all;
+}
+
+.headerContainer {
+    border-radius: 5px;
+	padding: 20px 40px;
+	width: 90%;
+	height: 35vh;
+    margin: 20px auto;
+	background: linear-gradient(135deg, #4447 40%, #fff7 40%), url('../../img/tools/email.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.fa-bars {
+    margin: 10px;
+	color: #fff;
+	font-size: 40px;
+	cursor: pointer;
+	transition: color .5s;
+}
+
+.fa-bars:hover {
+	color: #ddd;
+}
+
+.fa-bars:active {
+	color: #ccc;
+}
+
+.navAbsolutePosition {
+	position: absolute;
+	right: 80px;
+	top: 60px;
+}
+
+.navAbsolutePosition a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	margin: 0 10px;
+	font-family: 'Fira Sans', sans-serif;
+	transition: color .4s;
+}
+
+.navAbsolutePosition a:hover {
+	color: #ddd;
+}
+
+.navAbsolutePosition a:active {
+	color: #ccc;
+}
+
+.title {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    top: 30px;
+    background: -webkit-linear-gradient(135deg, #111 52%, #fff 52%);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    z-index: 5;
+}
+
+.messageContainer {
+    width: 90%;
+    padding: 20px;
+    background: #fff;
+    margin: 20px auto;
+}
+
+.messageContainer h2 {
+    text-align: center;
+    font-size: 32px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background: -webkit-linear-gradient(135deg, #111 52%, #555 52%);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+.informationContainer {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.informationContainer button {
+    width: 100%;
+    padding: 5px 15px;
+    font-size: 23px;
+    background: #444;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+	transition: .2s all;
+}
+
+.informationContainer button:hover { background: #5a5a5a; }
+.informationContainer button:active { background: #767676; }
+
+.inputControl, .messages {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 650;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #efefef;
+    margin: 10px 0;
+}
+
+.messages {
+	height: 70px;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 150px;
+    min-height: 40px;
+}
+
+.error {
+	font-size: 20px;
+	color: #a90000;
+	margin: 10px 0;
+	text-align: center;
+}
+
+/* Emails Container */
+
+.emailContainer {
+	display: none;
+	position: fixed;
+	top: 20px;
+	left: 64px;
+	width: 90%;
+	height: auto;
+	max-height: 90vh;
+	padding: 25px;
+	overflow: auto;
+	background: #fff;
+	border-radius: 5px;
+	z-index: 30;
+}
+
+.emailContainerTitle {
+	display: flex;
+	justify-content: center;
+}
+
+.emailContainerTitle h1 {
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	color: #333;
+    letter-spacing: 1px;
+	margin: 25px 0;
+}
+
+.emailContainerTitle button {
+	position: relative;
+	left: 140px;
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 30px;
+	cursor: pointer;
+	transition: .2s all;
+}
+
+.emailContainerTitle button:hover { color: #555; }
+.emailContainerTitle button:active { color: #999; }
+
+.emails {
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	gap: 10px 15px;
+	margin: 10px auto;
+	text-align: center;
+}
+
+.emails h4 {
+	padding: 5px 10px;
+	font-size: 18px;
+	background: #555;
+	color: #fff;
+	border-radius: 5px;
+	transition: .2s all;
+	width: 80%;
+	cursor: pointer;
+	transition: .3s all;
+}
+
+.emails h4:hover { background: #333;}
+.emails h4:active { background: #111; }
+
+.emailP {
+ 	margin: 20px auto;
+	text-align: center;
+	padding: 15px;
+}
+
+.emailP p {
+	font-family: sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	color: #444;
+	margin: 5px 0;
+}
+
+/*account validation*/
+
+.alert {
+	display: none;
+	position: fixed;
+	top: 20px;
+	left: 25%;
+	width: 600px;
+	max-height: 90vh;
+	padding: 40px;
+	background: #fff;
+	border-radius: 5px;
+	overflow: auto;
+	z-index: 60;
+}
+
+.alertTitle { margin-bottom: 25px; }
+
+.alertTitle h1 {
+	margin: 10px 0;
+	font-size: 28px;
+	font-family: 'Josefin Sans', sans-serif;
+	color: #444;
+}
+
+.alertTitle a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 15px;
+	background: #444;
+	font-size: 17px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.alert {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 16px;
+}
+
+.step { margin: 20px 0; }
+
+.step label {
+	display: inline-block;
+	padding: 5px 10px;
+	background: #444;
+	border-radius: 50%;
+	color: #fff;
+	margin: 5px 0;
+}
+
+.step p {
+	display: inline;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 16px;
+}
+
+.warning {
+	margin: 20px 0;
+	padding: 10px 25px;
+	background: #444;
+	color: #fff;
+}
+
+.why { margin: 5px 0; }

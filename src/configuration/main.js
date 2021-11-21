@@ -1,6 +1,8 @@
 const { BrowserWindow, Menu, ipcMain, app, Notification, ipcRenderer } = require('electron');
-const db = require('../database');
 const Alert = require('electron-alert');
+
+const db = require('../database');
+
 const { saveMember, getMembers, removeMember, updateMember } = require('./events/memberEvents');
 const { saveFinance, getFinances, getOneFinance, updateFinance, removeFinance } = require('./events/financeEvents');
 const { getDiscipleshipMembers,
@@ -15,6 +17,8 @@ const { getDiscipleshipMembers,
 		removeList } = require('./events/discipleshipEvents');
 const { getConsolidationPerson, addPerson, updatePerson, getSpecificConsolidation, removeConsolidationPerson } = require('./events/consolidationEvents');
 const { getOneConsolidationProcess, getConsolidationProcess, getResponsiblePeople, addProcess, updateProcess, removeProcess } = require('./events/processEvents');
+
+const email = require('../helpers/email');
 
 let software, addMember, addFinance, addPersonToConsolidation, addProcessToPerson, welcome, authentication, configuration;
 let windowCloseValidation = false;
@@ -491,6 +495,34 @@ ipcMain.on('removeList', (e,date) => {
 
 ipcMain.handle('getListRegister', () => getListRegister(software));
 ipcMain.handle('getListToEdit', (e,date) => getListToEdit(software,date));
+
+/*   !EMAIL!   */
+
+ipcMain.handle('validationNecessaryForApplication', async () => { 
+	let validation = await db.query('SELECT appEmail, appPassword FROM setting');
+	validation = validation[0];
+
+	if (validation.appEmail === null || validation.appPassword === null) software.webContents.send('validationError');
+});
+
+ipcMain.handle('sendEmail', async (e,data) => { 
+	const response = await email(data.title,data.description,data.emails);
+	if (response) {
+		new Notification({
+            title: "Administracion De Iglesia",
+            body: 'Hubo Un Error Al Enviar El Correo'
+        }).show();
+		software.reload();
+	} else {
+		new Notification({
+            title: "Administracion De Iglesia",
+            body: 'Ha Sido Enviado El Correo Satisfactoriamente'
+        }).show();
+		software.reload();
+	};
+});
+
+ipcMain.handle('getEmails', () => getMembers(software,null,'getEmails'))
 
 module.exports = {
 	welcomeWindow,

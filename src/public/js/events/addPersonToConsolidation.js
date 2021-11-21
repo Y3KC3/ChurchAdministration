@@ -48,7 +48,6 @@ function excludeDiscipleshipMember(option,id,name) {
         membersToTakeResponsibilitySelected.innerHTML += `<p class="selected" value="${option.value}" name="${name}">${name}${(editing) ? '<button class="selectedButton cancelAddResponsibility">X</button>' : ''}</p>`;
         idMembersToTakeResponsibility.push(id);
         let options = membersToTakeResponsibility.querySelectorAll('option');
-        console.log(options.length);
         if (options.length == 2) membersToTakeResponsibility.setAttribute('disabled','');
         option.remove();
         cancelAddResponsibility = document.querySelectorAll('.cancelAddResponsibility');

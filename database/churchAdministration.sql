@@ -1,5 +1,12 @@
 CREATE DATABASE churchAdministration;
 
+CREATE TABLE setting (
+    id INT DEFAULT 1 NOT NULL,
+    appEmail VARCHAR(50),
+    appPassword VARCHAR(20),
+    PRIMARY KEY (id)
+);
+
 CREATE TABLE fullnamemember (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(50),

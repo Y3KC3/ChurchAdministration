@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+            <meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+            <title>Email</title>
+            <link rel="stylesheet" type="text/css" href="../../css/toolsStyles/email.css"/>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
+        </body>
+        <body>
+			<div class="thereAreNoInternet">!No Estas Conectado A Internet!</div>
+            <div class="dark"></div>
+            <div class="sidebar">
+				<a href="../index.html">
+					<div class="buttonDiv">
+						<h1>Inicio</h1>
+					</div>
+				</a>
+				<a href="../tables/memberAdministration.html">
+					<div class="buttonDiv">
+						<h1>Administracion</h1>
+					</div>
+				</a>
+				<a href="../tables/finances.html">
+					<div class="buttonDiv">
+						<h1>Finanzas</h1>
+					</div>
+				</a>
+				<a href="../tables/discipleship.html">
+					<div class="buttonDiv">
+						<h1>Discipulado</h1>
+					</div>
+				</a>
+				<a href="./email.html">
+					<div class="buttonDiv">
+						<h1>Correos</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Escuela Biblica</h1>
+					</div>	
+				</a>			
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Estadisticas</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Configuracion</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Ayuda</h1>
+					</div>
+				</a>
+				<a href="">
+					<div class="buttonDiv">
+						<h1>Contacto</h1>
+					</div>
+				</a>
+			</div>
+			<header class="headerContainer">
+				<i class="fas fa-bars" id="bars"></i>
+                <h1 class="title">Envia Correos Electronicos</h1>
+            </header>
+            <div class="messageContainer">
+                <h2 class="spanTitle">Mensaje A Enviar</h2>
+                <div class="informationContainer">
+					<p class="error"></p>
+                    <button id="selectEmail">Selecciona Los Correos A Enviar</button>
+                    <input type="text" placeholder="Titulo" class="inputControl" id="title" maxlength="50"/>
+                    <textarea placeholder="Mensaje" class="messages" id="description" maxlength="3000"></textarea>
+                    <button id="send">Enviar</button>
+                </div>
+				<div class="emailP"></div>
+            </div>
+			<div class="emailContainer">
+				<div class="emailContainerTitle">
+					<h1 class="peopleToSendEmail">Elija Las Personas A Enviar Los Correos</h1>
+					<button id="emailContainerExit">X</button>
+				</div>
+				<div class="emails"></div>
+			</div>
+			<div class="alert">
+				<div class="alertTitle">
+					<h1>Registre Su Cuenta De Aplicacion</h1>
+					<a href="../index.html">Volver</a>
+				</div>
+				<p>
+					Para Utilizar La Herramienta De Envio De Emails Tiene Que
+					Registrar Su Cuenta Gmail Y Contraseña De Aplicacion, Es
+					Recomendable Utilizar La Cuenta Gmail Oficial De La Iglesia,
+					Para Hacer Esto Siga Los Siguiente Pasos.
+				</p>
+				<div class="step">
+					<label>1</label>
+					<p>
+						Vaya A La Parte De Gestion De Cuenta (Normalmente Se 
+						Encuentra Al Precionar El Icono De Su Cuenta De Google).
+					</p>
+				</div>
+				<div class="step">
+					<label>2</label>
+					<p>
+						Entre A La Seccion De Seguridad, Y Precione La Verificacion
+						En 2 Pasos, Siga Los Pasos Que Le Aparezca En Pantalla.
+					</p>
+				</div>
+				<div class="step">
+					<label>3</label>
+					<p>
+						Si Fue Exitosa La Verificacion De 2 Pasos Regrese A La Seccion
+						De Seguridad, Y Abajo De La Verificacion De 2 Pasos Se Le Mostrara
+						Una Opcion Que Dice <b>Contraseña De Aplicaciones</b>, Seleccione
+						Esa Opcion.
+					</p>
+				</div>
+				<div class="step">
+					<label>4</label>
+					<p>
+						Selecciona La Aplicación Y El Dispositivo Para Los Que Quieres Generar 
+						La Contraseña De Aplicación. Rellene Los Campos Y Seleccione Generar.
+					</p>
+				</div>
+				<div class="step">
+					<label>5</label>
+					<p>
+						Se Le Mostrara Una Contraseña Con Caracteres Aleatorios, Copie Y Pegue
+						En La Configuracion De Church Administracion En La Seccion De Contraseña
+						De Aplicacion, Una Vez Hecho Ya Puede Cerrar La Gestion De Cuenta De Google,
+						Y Ya Puede Enviar Correos Multiples A Los Miembros Registrados (Solo Los Miembros 
+						Que Tienen Correos Registrados En La Aplicacion).
+					</p>
+				</div>
+				<p class="warning">
+					Advertencia: Si Trata De Colocar Un Correo O Contraseña De Aplicacion Falsa, Podria Dar Problemas En
+					La Aplicacion.
+				</p>
+				<p class="why">
+					Esta Informacion La Pedimos Porque No Podemos Acceder A Su Cuenta De Google Sin
+					Su Permiso, Por Ello Necesitamos Su Comprobacion Siguiendo Los Pasos Para Acceder 
+					A Su Cuenta (Toda Esta Informacion Quedara Cifrada Promoviendo La Seguridad De Su
+					Informacion).
+				</p>
+			</div>
+            <script src="../../js/tools/email.js"></script>
+        </body>
+    </html>

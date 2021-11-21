@@ -84,6 +84,11 @@ async function getMembers(win, id, order, search) {
             win.webContents.send('members', orderFotCharge);
             return;
         };
+        if (order === 'getEmails') {
+            const emails = await db.query('SELECT member.id, full.nameAbbreviation, member.email FROM member INNER JOIN fullnamemember AS full ON full.id = member.id_fullnamemember WHERE member.email != "" ORDER BY full.nameAbbreviation ASC');
+            win.webContents.send('emailsObtined', emails);
+            return;
+        };
     };
 };
 
